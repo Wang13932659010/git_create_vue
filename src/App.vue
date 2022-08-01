@@ -14,7 +14,7 @@ export default {
   name:'App',
   data(){
     return {
-      temp:false
+      temp:true
     }
   },
   created() {
@@ -23,11 +23,11 @@ export default {
     event(){
       this.temp=!this.temp
       if(this.temp){
-        if(this.$route.path!='/home1'){
+        if(this.$route.path!=='/home1'){
           this.$router.push('/home1')
         }
       }else{
-        if(this.$route.path!='/home2'){
+        if(this.$route.path!=='/home2'){
           this.$router.push('/home2')
         }
       }
@@ -51,9 +51,5 @@ nav {
 nav a {
   font-weight: bold;
   color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>

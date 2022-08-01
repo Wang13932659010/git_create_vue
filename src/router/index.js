@@ -5,6 +5,12 @@ import HomeView from '../views/HomeView.vue'
 Vue.use(VueRouter)
 
 const routes = [
+
+  {
+    path: '/',
+    name:'App',
+    redirect:'/home1',
+  },
   {
     path: '/home1',
     name: 'home1',
