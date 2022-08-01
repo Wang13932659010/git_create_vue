@@ -1,0 +1,56 @@
+<template>
+  <div id="app">
+    <button @click="event">切换</button>
+<!--    <router-link :to="temp?'/home1':'/home2'">跳转</router-link>-->
+<!--  测试两种方法  -->
+    <router-view/>
+  </div>
+</template>
+<script>
+export default {
+  name:'App',
+  data(){
+    return {
+      temp:false
+    }
+  },
+  created() {
+  },
+  methods:{
+    event(){
+      this.temp=!this.temp
+      if(this.temp){
+        if(this.$route.path!='/home1'){
+          this.$router.push('/home1')
+        }
+      }else{
+        if(this.$route.path!='/home2'){
+          this.$router.push('/home2')
+        }
+      }
+    }
+  }
+}
+</script>
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
+}
+</style>
