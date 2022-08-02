@@ -3,6 +3,7 @@
     <!--    第一次提交-->
     <!--    第二次提交-->
     <!--    第三次提交-->
+    <!--    第五次提交-->
     <button @click="event">切换</button>
     <!--    <router-link :to="temp?'/home1':'/home2'">跳转</router-link>-->
     <!--  测试两种方法  -->
@@ -23,11 +24,11 @@ export default {
     event(){
       this.temp=!this.temp
       if(this.temp){
-        if(this.$route.path!='/home1'){
+        if(this.$route.path!=='/home1'){
           this.$router.push('/home1')
         }
       }else{
-        if(this.$route.path!='/home2'){
+        if(this.$route.path!=='/home2'){
           this.$router.push('/home2')
         }
       }
@@ -51,9 +52,5 @@ nav {
 nav a {
   font-weight: bold;
   color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>
