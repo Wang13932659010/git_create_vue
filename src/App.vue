@@ -8,7 +8,7 @@
     <button @click="event">切换</button>
     <!--    <router-link :to="temp?'/home1':'/home2'">跳转</router-link>-->
     <!--  测试两种方法  -->
-    <!--    master分支修改-->
+    <!--    master分支修改    -->
     <router-view/>
   </div>
 </template>
